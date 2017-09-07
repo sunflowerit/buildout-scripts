@@ -12,6 +12,7 @@ def do_pylint():
     cur_path = os.getcwd()
     repo_to_lint = os.path.join(cur_path, 'parts', arguments.repo_to_lint)
     for path_to_lint in os.listdir(repo_to_lint):
-        if not os.path.isfile(path_to_lint):
-            Run(['--rcfile=.pylint.cfg', path_to_lint])
+        full_path_to_lint = os.path.join(repo_to_lint, path_to_lint)
+        if not os.path.isfile(full_path_to_lint):
+            Run(['--rcfile=.pylint.cfg', full_path_to_lint])
 
