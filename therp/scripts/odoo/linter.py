@@ -4,7 +4,7 @@ import os
 from pylint.lint import Run
 
 
-def do_pylint(session):
+def do_pylint():
     parser = ArgumentParser()
     parser.add_argument('path_to_lint', metavar='folder', type=str,
                         required=True,
