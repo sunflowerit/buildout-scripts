@@ -11,4 +11,4 @@ therp.scripts.odoo.egg-info/requires.txt
 therp.scripts.odoo.egg-info/top_level.txt
 therp/scripts/__init__.py
 therp/scripts/odoo/__init__.py
-therp/scripts/odoo/pylint.py
+therp/scripts/odoo/linter.py

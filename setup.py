@@ -47,7 +47,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-             'pylint = therp.scripts.odoo.pylint:do_pylint',
+             'pylint = therp.scripts.odoo.linter:do_pylint',
         ]
     }
 )

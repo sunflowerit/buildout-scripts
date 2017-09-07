@@ -1,3 +1,3 @@
 anybox.recipe.odoo
-pylint
+pylint==1.6.4
 pylint_odoo
