@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+therp/__init__.py
+therp.scripts.odoo.egg-info/PKG-INFO
+therp.scripts.odoo.egg-info/SOURCES.txt
+therp.scripts.odoo.egg-info/dependency_links.txt
+therp.scripts.odoo.egg-info/entry_points.txt
+therp.scripts.odoo.egg-info/namespace_packages.txt
+therp.scripts.odoo.egg-info/not-zip-safe
+therp.scripts.odoo.egg-info/requires.txt
+therp.scripts.odoo.egg-info/top_level.txt
+therp/scripts/__init__.py
+therp/scripts/odoo/__init__.py
+therp/scripts/odoo/pylint.py
