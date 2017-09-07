@@ -9,11 +9,11 @@ def do_pylint():
     parser.add_argument('repo_to_lint', metavar='repo', type=str,
                         help='the name of the repo to run PyLint on')
     arguments = parser.parse_args()
-    cur_path = os.getcwd()
-    repo_to_lint = os.path.join(cur_path, 'parts', arguments.repo_to_lint)
+    script_path = os.path.dirname(os.path.abspath(__file__))
+    base_dir = os.path.join(script_path, '../../../..')
+    repo_to_lint = os.path.join(base_dir, 'parts', arguments.repo_to_lint)
+    rc_file = os.path.join(base_dir, '.pylint.cfg')
     for path_to_lint in os.listdir(repo_to_lint):
         full_path_to_lint = os.path.join(repo_to_lint, path_to_lint)
-        if not os.path.isfile(full_path_to_lint):
-            print full_path_to_lint
-            Run(['--rcfile=.pylint.cfg', full_path_to_lint])
-
+        if os.path.isfile(os.path.join(full_path_to_lint, '__init__.py')):
+            Run(['--rcfile=' + rc_file, full_path_to_lint], exit=False)
