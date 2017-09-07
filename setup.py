@@ -13,7 +13,7 @@ if sys.version_info < (2, 6):
 # version 1.4.1 is the one required by reportlab anyway
 requires = [
   'anybox.recipe.odoo',
-  'pylint',
+  'pylint==1.6.4',
   'pylint_odoo'
 ]
 
