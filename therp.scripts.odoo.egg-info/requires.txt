@@ -1,2 +1,3 @@
 anybox.recipe.odoo
 pylint
+pylint_odoo
