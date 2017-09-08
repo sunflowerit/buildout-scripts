@@ -16,4 +16,6 @@ def do_pylint():
     for path_to_lint in os.listdir(repo_to_lint):
         full_path_to_lint = os.path.join(repo_to_lint, path_to_lint)
         if os.path.isfile(os.path.join(full_path_to_lint, '__init__.py')):
-            Run(['--rcfile=' + rc_file, full_path_to_lint], exit=False)
+            Run(['--rcfile=' + rc_file, 
+            '--load-plugins=pylint_odoo', 
+            full_path_to_lint], exit=False)
