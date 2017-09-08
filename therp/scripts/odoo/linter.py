@@ -13,7 +13,7 @@ def do_pylint():
     base_dir = os.path.join(script_path, '../../../..')
     repo_to_lint = os.path.join(base_dir, 'parts', arguments.repo_to_lint)
     rc_file = os.path.join(base_dir, '.pylint.cfg')
-    for path_to_lint in os.listdir(repo_to_lint):
+    for path_to_lint in sorted(os.listdir(repo_to_lint)):
         full_path_to_lint = os.path.join(repo_to_lint, path_to_lint)
         if os.path.isfile(os.path.join(full_path_to_lint, '__init__.py')):
             Run(['--rcfile=' + rc_file, 
